@@ -1,0 +1,12 @@
+:root {
+  --table-gray: rgb(228, 228, 228);
+  --white-gray: #f4f4f4;
+  --light-gray: #f0f0f0;
+  --dark-gray: #cfcece;
+  --very-light-gray: #e7e6e6;
+  --very-dark-gray: #3f3f3f;
+  --dark-blue: #13495c;
+  --light-blue: #00939b;
+  --light-blue-alpha: rgba(0, 147, 155, 0.2);
+  --dark-blue-alpha: rgba(19, 73, 92, 0.2);
+}
