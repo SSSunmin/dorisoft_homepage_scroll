@@ -1,9 +1,7 @@
 import styled from './App.module.css';
-import Home from './components/mainpage/home/Home';
 import Header from './components/mainpage/home/Header';
 import Footer from './components/mainpage/home/Footer';
 import History from './components/mainpage/aboutus/History';
-import React from 'react';
 import Organization from './components/mainpage/aboutus/Organization';
 import CustomerCenter from './components/mainpage/customercenter/CustomerCenter';
 import BusinessInfo from './components/mainpage/home/BusinessInfo';
@@ -18,8 +16,8 @@ import {
 import BannerSlider from './components/mainpage/home/BannerSlider';
 import CompanyInfo from './components/mainpage/home/CompanyInfo';
 import Title from './components/ui/Title';
-import { useRef } from 'react';
-import OrganizationScroll from './components/mainpage/aboutus/OrganizationScroll';
+import DiviceTopBar from './components/mainpage/home/DiviceTopBar';
+import { useEffect, useState } from 'react';
 
 const contents = [
   {
@@ -86,9 +84,22 @@ const contents = [
 ];
 
 function App() {
+  const [ShowTopBar, setSHowTopBar] = useState(false);
+  const TopbarHandler = () => {
+    setSHowTopBar(!ShowTopBar);
+  };
+  const offTopbar = () => {
+    setSHowTopBar(false);
+  };
+  window.screen.addEventListener('orientationchange', function () {
+    console.log(
+      'The orientation of the screen is: ' + window.screen.orientation
+    );
+  });
   return (
     <div id="scroll-top" className={styled.App}>
-      <Header />
+      <Header TopbarHandler={TopbarHandler} onClick={offTopbar} />
+      <DiviceTopBar onClick={offTopbar} toggle={ShowTopBar} />
       <div className={styled.App__contents}>
         {/* <Home /> */}
         <BannerSlider />

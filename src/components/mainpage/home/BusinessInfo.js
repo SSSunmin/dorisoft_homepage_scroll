@@ -68,6 +68,7 @@ const BusinessInfo = ({ title, contents }) => {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '0px',
+    touchMove: false,
     Speed: 3000,
     variableWidth: true,
     nextArrow: <NextArrow cssclassName={styled.nextbtn} />,

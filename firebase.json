@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "public": "build",
+    "site": "dorisoft-homepage-scroll",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
